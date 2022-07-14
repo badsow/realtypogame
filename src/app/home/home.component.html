@@ -1,0 +1,33 @@
+<div *ngIf="!isStarted">
+    <div class="container">
+        <div class="row" style="margin-top: 20px">
+            <div class="col"></div>
+            <div class="col" style="display: flex ; flex-direction:column; align-items:center;">
+                First name*<input placeholder="First Name..." type="text" aria-label="First name" (keyup)="generateUsername()"  [(ngModel)]="firstName" style="margin-bottom: 10px" class="form-control"
+                    required>
+                Last name*<input placeholder="Last Name..." type="text" aria-label="Last name"  [(ngModel)]="lastName" (keyup)="generateUsername()" class="form-control" required>
+                Username*<input placeholder="Username..." type="text" aria-label="Username" class="form-control"  [(ngModel)]="username" disabled="true">
+                <div class="input-group-prepend">
+                </div>
+                Time*<select class="custom-select" id="inputGroupSelect01"  [(ngModel)]="time" required>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                    <option value="60">60</option>
+                </select>
+                Language*<select class="custom-select" id="inputGroupSelect01" [(ngModel)]="language" required>
+                    <option value="Fr">French</option>
+                    <option value="En">English</option>
+                    <option value="Br">Bambara</option>
+                </select>
+                <button class="btn btn-success" type="button" style="margin-top: 10px;" (click)="startGame()" [disabled]="!(firstName!=='' && lastName!=='' && language!=='')"> Start
+                </button> 
+            </div>
+    
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
+    <ng-container *ngIf="isStarted">
+        <app-game></app-game>
+    </ng-container>
+    

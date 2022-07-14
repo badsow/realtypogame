@@ -1,0 +1,19 @@
+<div class="mystyle"> 
+
+    <!-- -->
+<div class="col-md-6  mx-auto" >
+    <table >
+        <tr>
+            <th> Username </th>
+            <th> Score </th>
+            <th> Time (seconds) </th>
+           
+        </tr>
+        <tr *ngFor="let player of playerList">
+            <td> {{player.username}} </td>
+            <td> {{player.score}}</td>
+            <td> {{player.wpm}} </td>
+        </tr>
+    </table>
+</div>
+</div>

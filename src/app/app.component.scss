@@ -1,0 +1,33 @@
+
+.app-container{
+
+    display: block;
+    min-height: 100vh;
+
+    position: relative;
+
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.body{
+    padding-top: 156px;
+    height: calc(100vh - 138px);
+    // max-height: 200px;
+    overflow: auto;
+    width: 100%;
+    background-color:#F0FFFF;
+    z-index: -23;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
