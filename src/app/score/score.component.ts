@@ -20,6 +20,7 @@ export class ScoreComponent implements OnInit {
     const tempPlayerList   = localStorage.getItem('playerList');
     if(tempPlayerList !== null){
       this.playerList=JSON.parse(tempPlayerList);
+      this.playerList.sort((a,b)=>(b.wpm-a.wpm))
   }
   
 }
